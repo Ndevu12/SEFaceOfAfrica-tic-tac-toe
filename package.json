@@ -1,0 +1,34 @@
+{
+  "name": "SEFaceOfAfrica-tic-tac-toe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/Ndevu12/SEFaceOfAfrica-tic-tac-toe.git",
+  "author": "Ndevu12 <niyokwizerwajeanpaulelisa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'Error: Not tests found!'",
+    "dev": "cross-env APP_ENV=dev nodemon src/app.js",
+    "start": "node src/app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration": " npm run typeorm migration:run -- -d ./ormconfig.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.4",
+    "nodemon": "^3.1.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-dist": "^5.15.2",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
