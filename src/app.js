@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -14,12 +14,11 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use(bodyParser)
 
 // cookie-parser middleware
 app.use(cookieParser());
 
-app.use("/api", Route);
+app.use("/", Route);
 
 // Set up mongoose connection
 connectDb();
@@ -38,7 +37,7 @@ app.get("/", (req, res) => {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="<KEY>" crossorigin="anonymous">
       </head>
       <body>
-        <div class="container" style.margin-top=10px>
+        <div class="container" style.margin-top=20px>
           <div class="jumbotron">
             <h1 class="display-4">Welcome to Tic Tac Toe Game API</h1>
             <br><h2>Tic Tac Toe Game, SE Face of Africa Challenge</h2>
