@@ -26,24 +26,7 @@ class UserController {
 
       const user = await UserServices.userSignup(newUser);
 
-      const accessToken = sign({
-        id: user._id,
-        username: user.username,
-        role: user.role,
-        email: user.email,
-      });
-
-      const userObject = {
-        username: user.username,
-      };
-      userObject.accessToken = accessToken;
-
-      res.cookie("token", accessToken, {
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
-      });
-
-      res.status(201).json({message: "Signed up successful", userObject});
+      res.status(201).json({message: "Signed up successful", username});
     } catch (error) {
       res.status(201).json({message: (error).message || "Soryy, something went wrong"});
     }

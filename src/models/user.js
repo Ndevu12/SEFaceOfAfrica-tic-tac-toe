@@ -1,8 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-/**
- * Interface representing the structure of an admin document.
- */
 const userSchema = new Schema({
     username: {
         type: String,
@@ -23,11 +20,15 @@ const userSchema = new Schema({
         enum: ['admin', 'player'], 
         default: 'player', 
     },
+    gamesPlayed: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Game'
+    }],
+    totalScore: {
+        type: Number,
+        default: 0,
+    },
 });
-
-userSchema.methods.deletemany = function () {
-    return this.deleteMany().exec();
-};
 
 const User = mongoose.model('User', userSchema);
 
