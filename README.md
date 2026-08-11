@@ -5,8 +5,8 @@ Tic tac toe Challenge
 
 clone repo
 ```bash
-git clone https://github.com/Ndevu12/SEFaceOfAfrica-tic-tac-toe.git
-cd SEFaceOfAfrica-tic-tac-toe
+git clone https://github.com/Ndevu12/tic-tac-toe.git
+cd tic-tac-toe
 ```
 ### Start the server
 
