@@ -1,4 +1,4 @@
-# SEFaceOfAfrica-tic-tac-toe
+## Tic-tac-toe Game
 Tic tac toe Challenge
 
 ## How to contribute
