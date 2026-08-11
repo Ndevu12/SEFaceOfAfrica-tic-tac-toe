@@ -1,0 +1,39 @@
+/user/signup:
+  post:
+    tags:
+      - Auth
+    summary: Register a user
+    description: Register a user with username, email and password
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+              password:
+                type: string
+                format: password
+              username:
+                type: string
+                format: string          
+            required:
+              - email
+              - password
+    responses:
+      '200':
+        description: user registered successfully
+      '400':
+        description: provide an email, username and password, Invalid email or password.
+      '401':
+        description: Unauthorized
+      '403':
+        description: Forbidden
+      '404':
+        description: user not found
+      '500':
+        description: Internal server error
+    
