@@ -1,12 +1,12 @@
-# SEFaceOfAfrica-tic-tac-toe
+## Tic-tac-toe Game
 Tic tac toe Challenge
 
 ## How to contribute
 
 clone repo
 ```bash
-git clone https://github.com/Ndevu12/SEFaceOfAfrica-tic-tac-toe.git
-cd SEFaceOfAfrica-tic-tac-toe
+git clone https://github.com/Ndevu12/tic-tac-toe.git
+cd tic-tac-toe
 ```
 ### Start the server
 
